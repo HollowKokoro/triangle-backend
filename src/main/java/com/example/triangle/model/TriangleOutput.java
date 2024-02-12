@@ -1,31 +1,33 @@
 package com.example.triangle.model;
 
-public class TriangleOutput {
-    private final Integer area;
-    private final Integer perimeter;
-    private final String type;
-    private final Integer median;
-    private final Integer bisector;
-    private final Integer height;
-    private final Integer areaOfInscribedCircle;
-    private final Integer areaOfCircumscribedCircle;
+import java.util.List;
 
-    public TriangleOutput(Integer area, Integer perimeter, String type, Integer median, Integer bisector, Integer height, Integer areaOfInscribedCircle, Integer areaOfCircumscribedCircle) {
+public class TriangleOutput {
+    private final double area;
+    private final double perimeter;
+    private final String type;
+    private final List<Double> medianList;
+    private final List<Double> bisector;
+    private final List<Double> heights;
+    private final double areaOfInscribedCircle;
+    private final double areaOfCircumscribedCircle;
+
+    public TriangleOutput(Double area, double perimeter, String type, List<Double> medianList, List<Double> bisector, List<Double> heights, double areaOfInscribedCircle, double areaOfCircumscribedCircle) {
         this.area = area;
         this.perimeter = perimeter;
         this.type = type;
-        this.median = median;
+        this.medianList = medianList;
         this.bisector = bisector;
-        this.height = height;
+        this.heights = heights;
         this.areaOfInscribedCircle = areaOfInscribedCircle;
         this.areaOfCircumscribedCircle = areaOfCircumscribedCircle;
     }
 
-    public Integer getArea() {
+    public double getArea() {
         return area;
     }
 
-    public Integer getPerimeter() {
+    public double getPerimeter() {
         return perimeter;
     }
 
@@ -33,23 +35,37 @@ public class TriangleOutput {
         return type;
     }
 
-    public Integer getMedian() {
-        return median;
+    public List<Double> getMedians() {
+        return medianList;
     }
 
-    public Integer getBisector() {
+    public List<Double> getBisector() {
         return bisector;
     }
 
-    public Integer getHeight() {
-        return height;
+    public List<Double> getHeights() {
+        return heights;
     }
 
-    public Integer getAreaOfInscribedCircle() {
+    public double getAreaOfInscribedCircle() {
         return areaOfInscribedCircle;
     }
 
-    public Integer getAreaOfCircumscribedCircle() {
+    public double getAreaOfCircumscribedCircle() {
         return areaOfCircumscribedCircle;
+    }
+
+    @Override
+    public String toString() {
+        return "TriangleOutput{" +
+                "area=" + area +
+                ", perimeter=" + perimeter +
+                ", type='" + type + '\'' +
+                ", medianList=" + medianList +
+                ", bisector=" + bisector +
+                ", heights=" + heights +
+                ", areaOfInscribedCircle=" + areaOfInscribedCircle +
+                ", areaOfCircumscribedCircle=" + areaOfCircumscribedCircle +
+                '}';
     }
 }

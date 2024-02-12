@@ -1,43 +1,43 @@
 package com.example.triangle.model;
 
 public class TriangleInput {
-    private final Integer a;
-    private final Integer b;
-    private final Integer c;
-    private final Integer ab;
-    private final Integer bc;
-    private final Integer ac;
+    private final double aSide;
+    private final double bSide;
+    private final double cSide;
+    private final double abAngle;
+    private final double bcAngle;
+    private final double acAngle;
 
-    public TriangleInput(Integer a, Integer b, Integer c, Integer ab, Integer bc, Integer ac) {
-        this.a = a;
-        this.b = b;
-        this.c = c;
-        this.ab = ab;
-        this.bc = bc;
-        this.ac = ac;
+    public TriangleInput(Double aSide, double bSide, double cSide, double abAngle, double bcAngle, double acAngle) {
+        this.aSide = aSide;
+        this.bSide = bSide;
+        this.cSide = cSide;
+        this.abAngle = abAngle;
+        this.bcAngle = bcAngle;
+        this.acAngle = acAngle;
     }
 
-    public Integer getA() {
-        return a;
+    public double getASide() {
+        return aSide;
     }
 
-    public Integer getB() {
-        return b;
+    public double getBSide() {
+        return bSide;
     }
 
-    public Integer getC() {
-        return c;
+    public double getCSide() {
+        return cSide;
     }
 
-    public Integer getAb() {
-        return ab;
+    public double getAbAngle() {
+        return abAngle;
     }
 
-    public Integer getBc() {
-        return bc;
+    public double getBcAngle() {
+        return bcAngle;
     }
 
-    public Integer getAc() {
-        return ac;
+    public double getAcAngle() {
+        return acAngle;
     }
 }
