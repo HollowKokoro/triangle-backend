@@ -19,6 +19,7 @@ public class TriangleController {
         return new ResponseEntity<>(HttpStatus.ACCEPTED);
     }
 
+    @CrossOrigin(origins = "*")
     @GetMapping("/output")
     public ResponseEntity<TriangleOutput> output() {
         return new ResponseEntity<>(output, HttpStatus.CREATED);
